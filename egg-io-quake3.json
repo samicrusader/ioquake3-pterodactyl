@@ -1,0 +1,27 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2020-12-31T03:27:51-05:00",
+    "name": "ioQuake3",
+    "author": "hi@samicrusader.me",
+    "description": "ioQuake3 dedicated server\r\n\r\nPlease edit configuration files in \/home\/container\/.q3a\/baseq3.\r\nIf your RCON password is \"secret\", then this server will not run.\r\n\r\nThis automatically installs update files required to use ioQuake3. This game server will not work until you install pak0.pk3 from your LEGALLY OBTAINED base game in \/home\/container\/.q3a\/baseq3.",
+    "features": null,
+    "image": "samicrusader\/ioquake3-pterodactyl:latest",
+    "startup": "~\/ioquake3\/ioq3ded.x86_64 +exec server.cfg +exec levels.cfg +exec bots.cfg $( [ \"$SERVER_MEMORY\" == \"0\" ] || printf %s '+set com_hunkmegs {{SERVER_MEMORY}}' ) +set net_port {{SERVER_PORT}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"--- Common Initialization Complete ---\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "quit"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "alpine:3.4",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": []
+}
