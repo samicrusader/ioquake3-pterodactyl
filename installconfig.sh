@@ -16,7 +16,7 @@ printf '// shamelessly stolen from https://github.com/roguephysicist/q3a-server\
 printf '// shamelessly stolen from https://github.com/roguephysicist/q3a-server\n\nseta bot_enable 1       // Allow bots on the server\nseta bot_nochat 1       // Make bots quiet\nseta g_spskill 4        // Default skill of bots [1-5] \nseta bot_minplayers 5   // This fills the server with bots to satisfy the minimum\n\n//## Manual adding of bots. syntax:\n//## addbot name [skill] [team] [delay]\n//addbot doom       4   blue    10\n//addbot bones      4   blue    10\n//addbot slash      4   blue    10\n//addbot orbb       4   red     10\n//addbot major      4   red     10\n//addbot hunter     4   red     10\n//addbot bitterman  4   red     10\n//addbot keel       4   red     10\n' >/home/container/.q3a/baseq3/bots.cfg
 
 # levels.cfg
-printf '// shamelessly stolen from https://github.com/roguephysicist/q3a-server\n\nset dm1 "map q3ctf4; set nextmap vstr dm2"\nset dm2 "map q3ctf3; set nextmap vstr dm3"\nset dm3 "map q3ctf2; set nextmap vstr dm4"\nset dm4 "map q3ctf1; set nextmap vstr dm1"\nvstr dm1' >/home/container/.q3a/baseq3/bots.cfg
+printf '// shamelessly stolen from https://github.com/roguephysicist/q3a-server\n\nset dm1 "map q3dm1; set nextmap vstr dm2"\nset dm2 "map q3dm2; set nextmap vstr dm3"\nset dm3 "map q3dm3; set nextmap vstr dm4"\nset dm4 "map q3dm4; set nextmap vstr dm1"\nvstr dm1\nmap q3dm1' >/home/container/.q3a/baseq3/bots.cfg
 
 # make persistence file
 touch /home/container/.gameexists

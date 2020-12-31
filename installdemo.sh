@@ -17,4 +17,3 @@ rm -rf /home/container/ioq3
 ash -c 'wget -nv --header="Referer: https://ioquake3.org/extras/patch-data/" "https://www.ioquake3.org/data/quake3-latest-pk3s.zip" -O- | unzip -'
 rm -rf quake3-latest-pk3s.zip
 mv /home/container/quake3-latest-pk3s/* /home/container/.q3a/.
-wget 'https://konch.ie/W2rhjV0gPgAC.pk3' -O /home/container/.q3a/baseq3/pak0.pk3
