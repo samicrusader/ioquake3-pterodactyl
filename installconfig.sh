@@ -17,3 +17,6 @@ printf '// shamelessly stolen from https://github.com/roguephysicist/q3a-server\
 
 # levels.cfg
 printf '// shamelessly stolen from https://github.com/roguephysicist/q3a-server\n\nset dm1 "map q3ctf4; set nextmap vstr dm2"\nset dm2 "map q3ctf3; set nextmap vstr dm3"\nset dm3 "map q3ctf2; set nextmap vstr dm4"\nset dm4 "map q3ctf1; set nextmap vstr dm1"\nvstr dm1' >/home/container/.q3a/baseq3/bots.cfg
+
+# make persistence file
+touch /home/container/.gameexists

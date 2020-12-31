@@ -14,10 +14,7 @@ ENV  USER=container HOME=/home/container
 WORKDIR /home/container
 
 COPY ./installdemo.sh /installdemo.sh
-RUN /bin/ash /installdemo.sh
-
 COPY ./installconfig.sh /installconfig.sh
-RUN /bin/ash /installconfig.sh
 
 COPY ./entrypoint.sh /entrypoint.sh
 CMD ["/bin/ash", "/entrypoint.sh"]
